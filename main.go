@@ -1,12 +1,15 @@
 package main
 
 import (
+	"github.com/agustfricke/fiber-upload-files/database"
 	"github.com/agustfricke/fiber-upload-files/handlers"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/template/html/v2"
 )
 
 func main() {
+
+  database.ConnectDB()
 
   engine := html.New("./templates", ".html")
 

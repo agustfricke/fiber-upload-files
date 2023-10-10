@@ -8,5 +8,9 @@
       <input type="file" name="upload" />
       <input type="submit" />
     </form>
+
+    {{ if .Files }} {{ range .Files }}
+    <div><img src="{{ .FilePath }}/" /></div>
+    {{ end }} {{ end }}
   </body>
 </html>
